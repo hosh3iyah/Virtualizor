@@ -132,7 +132,7 @@ if [ "$OS" = redhat ] ; then
 		exit 1;
 	fi
 	
-	wget --no-check-certificate https://mirror.softaculous.com/virtualizor/virtualizor.repo -O /etc/yum.repos.d/virtualizor.repo >> $LOG 2>&1
+	wget --no-check-certificate https://raw.githubusercontent.com/hosh3iyah/Virtualizor/refs/heads/main/virtualizor.repo -O /etc/yum.repos.d/virtualizor.repo >> $LOG 2>&1
 
 fi
 
