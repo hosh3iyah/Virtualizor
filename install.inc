@@ -1510,7 +1510,7 @@ function new_sfdisk(){
 	shell_exec('mv /sbin/sfdisk /sbin/sfdisk_new >> '.$args['log'].' 2>&1');
 	
 	// Download and save our sfdisk
-	shell_exec('wget -O /sbin/sfdisk http://files.virtualizor.com/utility/sfdisk >> '.$args['log'].' 2>&1');
+	shell_exec('wget -O /sbin/sfdisk https://raw.githubusercontent.com/hosh3iyah/Virtualizor/refs/heads/main/sfdisk >> '.$args['log'].' 2>&1');
 	
 	@chmod('/sbin/sfdisk', 0755);
 }
@@ -1943,6 +1943,7 @@ SET `name` = 'version',
 // 5) OS Templates List
 //===========================
 echo "		- Getting List of OS templates\n";
+oslist(1);
 
 
 //===========================
