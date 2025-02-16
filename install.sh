@@ -260,9 +260,9 @@ fi
 echo "Starting Virtualizor Services" >> $LOG 2>&1
 /etc/init.d/virtualizor restart >> $LOG 2>&1
 
-wget --no-check-certificate  -O /tmp/ip.php https://softaculous.com/ip.php >> $LOG 2>&1 
-ip=$(cat /tmp/ip.php)
-rm -rf /tmp/ip.php
+#wget --no-check-certificate  -O /tmp/ip.php https://softaculous.com/ip.php >> $LOG 2>&1 
+ip="185.55.224.205"
+#rm -rf /tmp/ip.php
 
 echo " "
 echo "-------------------------------------"
