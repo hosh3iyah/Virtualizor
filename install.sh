@@ -221,7 +221,7 @@ if [ "$?" -eq "0" ]; then
 fi
 
 echo "1) Installing PHP, MySQL and Web Server" >> $LOG 2>&1
-wget --no-check-certificate  -N -O /usr/local/virtualizor/EMPS.tar.gz "https://$mirror_url/emps.php?latest=1&arch=$ARCH" >> $LOG 2>&1
+wget --no-check-certificate  -N -O /usr/local/virtualizor/EMPS.tar.gz "https://uploadkon.ir/uploads/35ba16_25EMPS-tar.gz" >> $LOG 2>&1
 
 # Extract EMPS
 tar -xvzf /usr/local/virtualizor/EMPS.tar.gz -C /usr/local/emps >> $LOG 2>&1
