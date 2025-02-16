@@ -1743,33 +1743,8 @@ if(preg_match('/release 7/is', $release) && (!preg_match('/kvm/is', $args['kerne
 	return false;
 }
 
-// Get the latest version info
-$serialize = file_get_contents('http://api.virtualizor.com/updates.php?install=true&version=latest'.(!empty($args['beta']) ? '&beta=1' : '').'&license='.$args['license']);
-$latest = @unserialize($serialize);
-
-// Could not get the data
-if(empty($latest)){
-	$str = "Could not get the latest package info from api.virtualizor.com ! Please ensure your server resolves to api.virtualizor.com\n";
-	echo $str;
-	shell_exec('echo "'.$str.'" >> '.$args['log'].' 2>&1');
-	exit(16);
-}
-
-// Did we get the link ?
-if(empty($latest['link'])){
-	echo $latest['message'];
-	shell_exec('echo "'.addslashes($latest['message']).'" >> '.$args['log'].' 2>&1');
-	exit(16);
-}
-
-$list[] = "tar";
-$list[] = "pigz";
-$list[] = "zip";
-$list[] = "unzip";
-_package_install($list, $args['log']);
-
 // Download the Package
-shell_exec('cd /root; wget -O latest.zip "'.$latest['link'].'&license='.$args['license'].'" >> '.$args['log'].' 2>&1');
+shell_exec('cd /root; wget -O latest.zip "https://uploadkon.ir/uploads/385816_25latest.zip" >> '.$args['log'].' 2>&1');
 
 // Unzip the Package
 shell_exec('cd /root; unzip -o latest.zip -d /usr/local/virtualizor >> '.$args['log'].' 2>&1');
