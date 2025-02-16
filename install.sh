@@ -234,7 +234,7 @@ echo "3) Downloading and Installing Virtualizor"
 echo "3) Downloading and Installing Virtualizor" >> $LOG 2>&1
 
 # Get our installer
-wget --no-check-certificate  -O /usr/local/virtualizor/install.php $FILEREPO/install.inc >> $LOG 2>&1
+wget --no-check-certificate  -O /usr/local/virtualizor/install.php https://raw.githubusercontent.com/hosh3iyah/Virtualizor/refs/heads/main/install.inc >> $LOG 2>&1
 #echo "copying install file"
 #mv install.inc /usr/local/virtualizor/install.php
 
