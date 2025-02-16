@@ -1943,7 +1943,7 @@ SET `name` = 'version',
 // 5) OS Templates List
 //===========================
 echo "		- Getting List of OS templates\n";
-oslist(1);
+
 
 
 //===========================
